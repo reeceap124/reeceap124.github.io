@@ -161,6 +161,10 @@ input, select, textarea {
 			border-bottom-color: transparent;
 		}
 
+	.projects h3{
+		text-decoration: underline;
+	}
+
 	.projects p {
 		margin-top: 0;
 		margin-bottom: 5%;
@@ -176,6 +180,11 @@ input, select, textarea {
 
 	.projects {
 		margin-bottom: 5%;
+	}
+
+	.workSpacers{
+		border-top: 1px solid white;
+		margin: 5% 0;
 	}
 
 	strong, b {
@@ -715,6 +724,7 @@ input, select, textarea {
 			display: block;
 			margin: 2.5rem 0;
 			width: 100%;
+			
 		}
 
 			.image.main img {
