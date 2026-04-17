@@ -1,393 +1,1069 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Reece Pierson | Web Dev</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reece Pierson — Full Stack Engineer in Boise, Idaho. Building scalable applications with React, TypeScript, Node.js, and Azure." />
+  <title>Reece Pierson — Full Stack Engineer</title>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Reece Pierson</h1>
-								<p>Web Developer</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
 
-				<!-- Main -->
-					<div id="main">
+  <style>
+    :root {
+      --bg: #0e0f0d;
+      --surface: #141510;
+      --ink: #e8e4dc;
+      --ink-muted: #8a8780;
+      --ink-faint: #4a4844;
+      --accent: #7eb89a;
+      --accent-light: #1a2e24;
+      --rule: #242420;
+      --serif: 'Roboto Slab', Georgia, serif;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --max: 860px;
+      --pad: clamp(1.5rem, 5vw, 3rem);
+    }
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/mistyMorning.jpg" alt="misty morning over a farm" /></span>
-								<p>As a developer fascinated by discovering the ways that technology can be utilized to impact our everyday lives. I'm skilled and familiar with a multitude of technologies including HTML, CSS, and JavaScript. To get a comprehensive idea of what I can do check out my <a href="#work">awesome work</a>.</p>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-								<!-- image badge -->
-								<p class="badgeText">Check out more images by:</p>
-								<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@rundeimaging?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Runde Imaging"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Runde Imaging</span></a>
-							</article>
+    html {
+      scroll-behavior: smooth;
+    }
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/mntLake.jpg" alt="a man sitting at workstation" /></span>
-								
-								<p>Aside from the work that I've done on this site, here are some of my other projects</p>
-								<section class="projects">
-									<h3>News Site Project</h3>
-									<p>The main technology that I was involved with in this project was JavaScript, and working with components. Almost everything on the index page is generated through JavaScript. <br/>My favorite piece of code was the image carousel that I built from scratch for this project.</p>
-									<a href="https://github.com/reeceap124/News-Site-Project" class="codeLinks">Check Out My Code</a>
-								</section>
-								<div class='workSpacers'></div>
-								<section class="projects">
-									<h3>Marketing Page</h3>
-									<p>My team and I worked over the course of a week to develop a receipt tracking app. I was involved with the marketing page part of the team, where we developed a multipage site to advertise and link to the end product.</p>
-									<a href="https://github.com/Build-Week-ReceiptTracker/Marketing-Page" class="codeLinks">Check Out My Code</a>
-								</section>
-								<div class='workSpacers'></div>
-								<section class="projects">
-									<h3>Todo List App</h3>
-									<p>Here I'm playing around with and learning Javascript</p>
-									<a href="https://plnkr.co/edit/G2ljyv3ZAQ27y3GsxQtH?p=info" class="codeLinks">Check Out My Code</a>
-								</section>
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
 
-								
-								<!-- image badge -->
-								<p class="badgeText">Check out more images by:</p>
-								<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@cristina_gottardi?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Cristina Gottardi"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Cristina Gottardi</span></a>
-							</article>
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem var(--pad);
+      background: rgba(14, 15, 13, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/treesOnMountain.jpg" alt="Trees on a mountainside with overcast sky" /></span>
-								<p>In life, as in web development, I have a love for the variety experiences that there are out there. As is likely made obvious by the theme of this site, my wife and I love getting out and experiencing nature. We go hiking and camping as often our schedules and weather permit. <br/>With a history in the trades, creating things with my hands is another one of my life's joys. Right now, I'm fascinated with the process of knife making, and am working towards crafting a set of kitchen knives.</p>
+    nav.scrolled {
+      border-bottom-color: var(--rule);
+    }
 
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
 
-								<!-- image badge -->
-								<p class="badgeText">Check out more images by:</p>
-								<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@mikamatin?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Mika Matin"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Mika Matin</span></a>
-							</article>
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" placeholder="Don't fill out."/>
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" placeholder="Don't fill out."/>
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4" placeholder="Sorry. I don't have this message form up and running yet."></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary"/></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://twitter.com/reece_pierson" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-									<li><a href="https://github.com/reeceap124" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.2s ease;
+    }
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      left: 0;
+      width: 100%;
+    }
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+      transition: all 0.3s ease;
+    }
 
-								<section>
-									<h3 class="major">Lists</h3>
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 57px;
+      left: 0;
+      right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 1.5rem var(--pad);
+      z-index: 99;
+    }
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+    .mobile-menu.open { display: block; }
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+    .mobile-menu a {
+      display: block;
+      padding: 0.75rem 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+    }
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+    .mobile-menu a:last-child { border-bottom: none; }
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+    /* SECTIONS */
+    section {
+      padding: 7rem var(--pad);
+      max-width: calc(var(--max) + var(--pad) * 2);
+      margin: 0 auto;
+    }
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      position: relative;
+    }
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+    .hero-inner {
+      width: 100%;
+      max-width: 620px;
+    }
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+    .hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 1.5rem;
+    }
 
-							</article>
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4em;
+    }
 
-					</div>
+    .hero-name span {
+      color: var(--accent);
+    }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">All design credit to: <a href="https://html5up.net">HTML5 UP</a>.</p>
-						<p class="copyright">Background credit to: </p>
-						<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@jeremybishop?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jeremy Bishop"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Jeremy Bishop</span></a>
-					</footer>
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--ink-muted);
+      font-weight: 300;
+      max-width: 520px;
+      margin-bottom: 3rem;
+    }
 
-			</div>
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
 
-		<!-- BG -->
-			<div id="bg"></div>
+    .hero-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--ink);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    .hero-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
 
-	</body>
+    .hero-link svg {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: var(--pad);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    .hero-scroll-line {
+      width: 40px;
+      height: 1px;
+      background: var(--ink-faint);
+      animation: scrollLine 3s ease-in-out infinite;
+    }
+
+    /* SECTION HEADERS */
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-rule {
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 1.5rem;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .section-rule.visible {
+      width: 48px;
+    }
+
+    .section-title {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: clamp(1.85rem, 4.5vw, 2.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 3rem;
+    }
+
+    /* ABOUT */
+    #about {
+      background: var(--surface);
+      max-width: 100%;
+      padding: 7rem 0;
+      box-shadow: 0 1px 0 0 rgba(232, 228, 220, 0.04);
+    }
+
+    #about .inner {
+      max-width: calc(var(--max) + var(--pad) * 2);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--ink-muted);
+      margin-bottom: 1.25rem;
+      font-size: 1.02rem;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.9rem;
+    }
+
+    .detail-row:first-child {
+      border-top: 1px solid var(--rule);
+    }
+
+    .detail-label {
+      color: var(--ink-faint);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .detail-value {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    /* SKILLS & PROJECTS */
+    .skills-grid,
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card,
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 1.75rem;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .skill-card:hover,
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px -4px rgba(126, 184, 154, 0.1);
+    }
+
+    .skill-card-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+      font-weight: 500;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-tag {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: 0.25rem 0.65rem;
+    }
+
+    /* EXPERIENCE */
+    #experience {
+      background: var(--surface);
+      max-width: 100%;
+      padding: 7rem 0;
+      box-shadow: 0 1px 0 0 rgba(232, 228, 220, 0.04);
+    }
+
+    #experience .inner {
+      max-width: calc(var(--max) + var(--pad) * 2);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 2.5rem;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      transform: translateY(25px);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .exp-item.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .exp-item:first-child {
+      border-top: 1px solid var(--rule);
+    }
+
+    .exp-period {
+      font-size: 0.78rem;
+      color: var(--ink-faint);
+      letter-spacing: 0.05em;
+      line-height: 1.5;
+    }
+
+    .exp-location {
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      margin-top: 0.3rem;
+    }
+
+    .exp-company {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+    }
+
+    .exp-role {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .exp-bullets li {
+      font-size: 0.92rem;
+      color: var(--ink-muted);
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .exp-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.4em;
+      width: 0;
+      height: 1px;
+      background: var(--ink-faint);
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .exp-item.visible .exp-bullets li::before {
+      width: 0.85rem;
+    }
+
+    /* PROJECTS */
+    .project-placeholder-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      border: 1px dashed var(--rule);
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-title {
+      font-weight: 500;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+    }
+
+    .project-desc {
+      font-size: 0.88rem;
+      color: var(--ink-faint);
+      margin-bottom: 1.5rem;
+      line-height: 1.65;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .project-tag {
+      font-size: 0.72rem;
+      color: var(--ink-faint);
+      border: 1px solid var(--rule);
+      padding: 0.15rem 0.45rem;
+      border-radius: 2px;
+    }
+
+    .project-npm-link {
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .project-npm-link:hover {
+      color: var(--ink);
+    }
+
+    /* EDUCATION & CERTS */
+    .edu-item,
+    .cert-item {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .edu-item:first-child,
+    .cert-item:first-child {
+      border-top: 1px solid var(--rule);
+    }
+
+    .edu-school {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .edu-detail,
+    .cert-date {
+      font-size: 0.85rem;
+      color: var(--ink-faint);
+    }
+
+    .cert-badge {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background: var(--accent-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cert-badge svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* CONTACT */
+    #contact {
+      background: var(--surface);
+      max-width: 100%;
+      padding: 7rem 0;
+      box-shadow: 0 1px 0 0 rgba(232, 228, 220, 0.04);
+    }
+
+    #contact .inner {
+      max-width: calc(var(--max) + var(--pad) * 2);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .contact-item-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    .contact-item-value {
+      font-size: 1.05rem;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .contact-item-value:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scrollLine {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.9; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      .about-grid,
+      #education > .inner > div {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .exp-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .contact-row {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+
+      .hero-scroll { display: none; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Reece Pierson homepage">Reece Pierson</a>
+    
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <p class="hero-label">Full Stack Engineer — Boise, Idaho</p>
+      <h1 class="hero-name">Reece<br><span>Pierson</span></h1>
+      <p class="hero-tagline">I build thoughtful software that bridges data and experience — from serverless APIs to geospatial visualizations.</p>
+      
+      <div class="hero-links">
+        <a href="mailto:piersonreece@gmail.com" class="hero-link" aria-label="Send email to piersonreece@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          piersonreece@gmail.com
+        </a>
+        <a href="tel:7154502671" class="hero-link" aria-label="Call (715) 450-2671">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (715) 450-2671
+        </a>
+        <a href="https://github.com/reeceap124" target="_blank" rel="noopener" class="hero-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.5a3.5 3.5 0 0 0-3.5-3.5H9a3.5 3.5 0 0 0-3.5 3.5V22M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.64-.33 2.48-.33.84 0 1.68.11 2.48.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85 0 1.33-.01 2.41-.01 2.73 0 .27.18.58.69.49C19.14 20.62 22 16.78 22 12.25 22 6.59 17.52 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/reecepierson/" target="_blank" rel="noopener" class="hero-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="hero-scroll-line"></span>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="inner">
+      <p class="section-label">Background</p>
+      <div class="section-rule"></div>
+      <h2 class="section-title">About me</h2>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a full stack engineer with 5+ years of professional experience building scalable applications that turn complex data into actionable insights — from real estate market analytics to healthcare data pipelines.</p>
+          <p>My work lives at the intersection of reliable backend systems and polished frontend experiences. I focus on engineering solutions that are both technically excellent and genuinely intuitive for users.</p>
+          <p>Currently at Ensemble Health Partners as Software Engineer II, developing healthcare data tooling with React, TypeScript, and Azure serverless infrastructure.</p>
+        </div>
+
+        <div class="about-details">
+          <div class="detail-row">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">Boise, Idaho</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Current role</span>
+            <span class="detail-value">Software Engineer II</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Company</span>
+            <span class="detail-value">Ensemble Health Partners</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Experience</span>
+            <span class="detail-value">5+ years</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Certification</span>
+            <span class="detail-value">Azure AZ-900</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <p class="section-label">Toolkit</p>
+    <div class="section-rule"></div>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <p class="skill-card-label">Frontend</p>
+        <div class="skill-tags">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">D3.js</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card-label">Backend</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express</span>
+          <span class="skill-tag">Azure Functions</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card-label">Databases</p>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">PostGIS</span>
+          <span class="skill-tag">MSSQL</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card-label">Cloud &amp; Testing</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Jest</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="inner">
+      <p class="section-label">Career</p>
+      <div class="section-rule"></div>
+      <h2 class="section-title">Experience</h2>
+      
+      <div class="exp-list">
+        <div class="exp-item">
+          <div class="exp-meta">
+            <p class="exp-period">Apr 2025 — Present</p>
+            <p class="exp-location">Boise, ID</p>
+          </div>
+          <div class="exp-content">
+            <h3 class="exp-company">Ensemble Health Partners</h3>
+            <p class="exp-role">Software Engineer II</p>
+            <ul class="exp-bullets">
+              <li>Developed React/TypeScript components for internal data mapping tool used to standardize client healthcare data for analytics and billing.</li>
+              <li>Built serverless APIs with Node.js and Azure Functions for data ingestion, transformation, and validation.</li>
+              <li>Integrated RAG AI mapping recommendations, significantly reducing manual mapping time.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <p class="exp-period">Nov 2020 — Apr 2025</p>
+            <p class="exp-location">Boise, ID</p>
+          </div>
+          <div class="exp-content">
+            <h3 class="exp-company">LiveBy</h3>
+            <p class="exp-role">Software Engineer</p>
+            <ul class="exp-bullets">
+              <li>Built data quality audit system improving accuracy by 30%+ across diverse real estate data sources.</li>
+              <li>Optimized SQL queries and indexing, dramatically improving application performance.</li>
+              <li>Developed React/Next.js applications and D3.js geospatial visualizations for thousands of real estate agents.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-label">Selected Work</p>
+    <div class="section-rule"></div>
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div>
+          <p class="project-placeholder-label" style="border-color: var(--accent); color: var(--accent);">Open Source</p>
+          <h3 class="project-title">pg-numrange</h3>
+          <p class="project-desc">TypeScript-first Node.js library for PostgreSQL NUMRANGE and INT4RANGE types. Supports containment, union, intersection, and direct DB serialization.</p>
+        </div>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">PostgreSQL</span>
+          </div>
+          <a href="https://www.npmjs.com/package/pg-numrange" target="_blank" rel="noopener" class="project-npm-link">npm →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div>
+          <p class="project-placeholder-label">Ensemble Health Partners</p>
+          <h3 class="project-title">Healthcare Data Mapping Platform</h3>
+          <p class="project-desc">React/TypeScript frontend + Node.js/Azure serverless backend for standardizing complex healthcare data. Added RAG AI assistance to accelerate mapping workflows.</p>
+        </div>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Azure</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div>
+          <p class="project-placeholder-label">LiveBy</p>
+          <h3 class="project-title">Real Estate Market Insights</h3>
+          <p class="project-desc">Interactive D3.js visualizations powered by geospatial, census, and lifestyle data. Built data quality systems that improved accuracy across heterogeneous sources.</p>
+        </div>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Next.js</span>
+            <span class="project-tag">D3.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section id="education">
+    <div class="inner">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+        <!-- Education -->
+        <div>
+          <p class="section-label">Learning</p>
+          <div class="section-rule"></div>
+          <h2 class="section-title">Education</h2>
+          <div class="edu-item">
+            <p class="edu-school">Bloom Institute of Technology</p>
+            <p class="edu-detail">Computer Science · San Francisco, CA</p>
+            <p class="edu-detail">2019 – 2020</p>
+          </div>
+          <div class="edu-item">
+            <p class="edu-school">University of Wisconsin, Eau Claire</p>
+            <p class="edu-detail">Criminal Justice · Eau Claire, WI</p>
+            <p class="edu-detail">2012 – 2016</p>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+          <p class="section-label">Credentials</p>
+          <div class="section-rule"></div>
+          <h2 class="section-title">Certifications</h2>
+          <div class="cert-item">
+            <div class="cert-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#7eb89a" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div>
+              <p class="cert-name">Microsoft Certified: Azure Fundamentals</p>
+              <p class="cert-date">AZ-900 · June 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="inner">
+      <p class="section-label">Get in touch</p>
+      <div class="section-rule"></div>
+      <h2 class="section-title">Contact</h2>
+      <p style="color: var(--ink-muted); max-width: 440px; margin-bottom: 2.5rem; font-size: 1rem;">
+        Open to new opportunities, collaborations, or just a good conversation about software, data, or geospatial tech.
+      </p>
+      
+      <div class="contact-row">
+        <div class="contact-item">
+          <span class="contact-item-label">Email</span>
+          <a href="mailto:piersonreece@gmail.com" class="contact-item-value">piersonreece@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Phone</span>
+          <a href="tel:7154502671" class="contact-item-value">(715) 450-2671</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Location</span>
+          <span class="contact-item-value" style="border-color: transparent; cursor: default;">Boise, Idaho</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Reece Pierson</span>
+    <span>Full Stack Engineer — Boise, ID</span>
+  </footer>
+
+  <script>
+    // Nav scroll + active link
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section[id]');
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+
+      let current = '';
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 140) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Experience scroll reveal
+    const expObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 100);
+          expObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.exp-item').forEach(item => expObserver.observe(item));
+
+    // Section rule animation
+    const ruleObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          ruleObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.65 });
+
+    document.querySelectorAll('.section-rule').forEach(rule => ruleObserver.observe(rule));
+  </script>
+</body>
 </html>
